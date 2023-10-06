@@ -1,0 +1,69 @@
+.body{
+    background-color: rgb(100, 89, 89);
+  }
+  
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    
+    .col{
+      margin-top: 40px;
+    }
+    
+    
+    
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card:hover{
+      border: 1px solid  rgb(159, 153, 161);
+     
+         opacity: 0.8;
+    }
+   
+    .card-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 20px;
+      padding: 20px; 
+      color: white;
+    }
+    
+  
+
+  .card:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #b66912;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .card{
+    background-color: rgb(100, 100, 102);
+
+    border: 1px solid  rgb(70, 68, 68);
+  }
+    
+    
+    

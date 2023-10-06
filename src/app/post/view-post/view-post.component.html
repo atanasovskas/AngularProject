@@ -1,0 +1,20 @@
+
+<div class="container" *ngIf="postDetails">
+    
+    <div class="left">
+ <img [src]="postDetails?.url" [alt]="postDetails?.title"/>
+ <div class="buttons">
+    <button class="btn  btn-primary" [routerLink]="['']" [routerLink]="['/list/edit/',postDetails.id]"  >Edit</button>
+    <button class="btn  btn-danger " (click)="onDelete()" style="float:right">Delete</button>
+    </div>
+     </div>
+ <div class="right">
+     <h2 style="color: white;">Title: {{postDetails?.title}}</h2>
+     <hr style="color: rgb(197, 197, 197);">
+     <p style="color: white;">Album id: {{postDetails?.albumid}}</p>
+     <p style="color: white;">Url: {{postDetails?.thumbnailUrl}}</p>
+     <br>
+ 
+ </div>
+ </div>
+ 

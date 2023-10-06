@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="row">
+    <div class=" col col-6 col-sm-6 col-md-4" *ngFor="let photo of posts">
+      <div class="card " >  
+      <h5 class="title card-title" style="color: white;" >{{photo.title}}</h5>
+     <!-- <button (click)="deletePhoto(photo.id)">Delete</button> -->
+      <img [src]="photo.thumbnailUrl" alt="Image" class="image">
+      <div class="middle" [routerLink]="['/list/view/',photo.id]" >
+        <div class="text " [routerLink]="['/list/view/',photo.id]">View details</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

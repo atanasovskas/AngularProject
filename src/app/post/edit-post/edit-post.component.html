@@ -1,0 +1,58 @@
+<div class=" container"  >
+    <h1 style="color: white;"><b>Update Post</b></h1>
+    <hr style="color: rgb(197, 197, 197);">
+    <br>
+    <div class="col-md-6">
+       
+        <div class="col-md-12" *ngIf="dataLoaded">
+      <form [formGroup]="editForm" (submit)="editPost()" autocomplete="off" novalidate>
+        <div class="form-group" >
+           
+            <label style="color: white;" for="title">Title:</label>
+            <em *ngIf="editForm.get('title')?.invalid  && formSubmited" class="error-message">
+              Title is required.
+            </em>
+            <input formControlName="title" required name="title" [ngClass]="{'red-border':editForm.get('title')?.invalid  && formSubmited }" required id="title" type="text" class="form-control" placeholder="your photo title here..." />
+            
+          </div>
+          <br>
+          <div class="form-group">
+            <label style="color: white;" for="photo">Image url:</label>
+            <em *ngIf="editForm.get('url')?.invalid  && formSubmited" class="error-message">
+              Photo is required.
+            </em>
+            <input formControlName="url" [ngClass]="{'red-border':editForm.get('url')?.invalid  && formSubmited }"  name="photo" required id="photo" type="text" class="form-control" placeholder="photo url..." />
+           
+          
+          </div>
+          <br>
+          <div class="form-group">
+            <label style="color: white;" for="thumbnailUrl">ThumbnailUrl:</label>
+            <em *ngIf="editForm.get('thumbnailUrl')?.invalid  && formSubmited" class="error-message">
+              Thumbnail is required.
+            </em>
+            <input formControlName="thumbnailUrl" name="thumbnailUrl" [ngClass]="{'red-border':editForm.get('thumbnailUrl')?.invalid  && formSubmited }"  required id="thumbnailUrl" type="text" class="form-control" placeholder="thumbnail url..." />
+          
+            
+          </div>
+         <br>
+          <div class="form-group">
+              <label style="color: white;" for="albumId">Album id:</label>
+              <em *ngIf="editForm.get('albumId')?.invalid  && formSubmited" class="error-message">
+                  Album number is required.
+                </em>
+              <input formControlName="albumId" [ngClass]="{'red-border':editForm.get('albumId')?.invalid  && formSubmited }"  name="albumId" required id="albumId" type="number" class="form-control" placeholder="id of album..." />
+          
+              
+          </div>
+           <div>
+              <br>
+              <div class="buttons">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" class="btn btn-secondary" style="float:right" (click)="cancel()">Cancel</button>
+      </div>
+      </div>  
+      </form>
+      </div>
+      </div>
+    

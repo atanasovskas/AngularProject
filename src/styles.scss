@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+background-color: rgb(52, 52, 54);
+}
+
+.btn{
+    width: 100px;
+ }
+ .buttons{
+   
+     margin-top: 20px;
+ }
+ label{
+     font-weight: bold;
+ }
+ .error-message {
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 8px;
+    float:right
+
+  }
+  .red-border{
+    border-color: red;
+  }
